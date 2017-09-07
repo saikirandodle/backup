@@ -1,0 +1,35 @@
+<center><h2>{{students}}</h2></center>
+<hr/>
+<div ng-app="myApp" ng-controller = "employeesController">
+	<div class="row col-md-12">
+		 <div class="col-md-3">
+		  <select class="form-control" ng-model="sort" > 
+			<option value="">SortBy</option>
+			<option value="id">id</option>
+			<option value="userName">name</option>
+			<option value="companyId">companyId</option>
+ 		  </select>
+		 </div>
+		 <div class="col-md-3">
+			<input class="form-control" type="text" placeholder="Search" ng-model="searchText">
+ 		 </div>
+		 <div class="col-md-6">
+			<button class ="btn btn-sm btn-primary pull-right" onclick="location.href='#!/addEmployee'" type="button">
+			Add employee</button>
+		</div>
+	</div>
+      <br> <br> <br>	
+	  
+	<table class="table table-bordered table-striped table-condensed">
+		<tr>
+		   <th>ID</th>
+		   <th>Name</th>
+		   <th>Company ID</th>
+ 		</tr>
+		<tr ng-repeat = "employees in response | orderBy: sort  | filter: searchText">
+		   <td>{{employees.id}}</td>
+		   <td><a href="#!/employee/{{employees.id}}">{{ employees.userName }}</a></td>
+		   <td>{{ employees.companyId }}</td>
+ 		</tr>
+	 </table>
+</div>

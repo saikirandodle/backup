@@ -1,0 +1,37 @@
+<html>
+   <head>
+      <title>Angular JS Routing</title>
+       <script src = "scripts/angular.js"></script>
+	   <script src = "scripts/angular-route.js"></script>
+	   <script src = "scripts/script.js"></script>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="css/styles.css">
+   </head>
+   <body class="container" ng-app="Demo">
+    
+	 <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+         
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href=" #!/home">Home</a></li>
+            <li><a href=" #!/employees">Employees</a></li>
+            <li><a href=" #!/about">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <div class="container">
+       <ng-view></ng-view>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted"><center>Copyright 2010 - 2017 <b>Prokarma</b>. All Rights Reserved.</center></p>
+      </div>
+    </footer>	
+   </body>
+</html>

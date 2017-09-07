@@ -1,0 +1,27 @@
+<h2><center>{{employeeDetails}}</center></h2>
+<hr/>
+	<div  ng-app="Demo" ng-controller = "employeeDetailsController">
+		<div class="row col-lg-12">
+			<div class="row col-lg-6"></div>
+			<div class="row col-lg-3 empdiv">
+			<table class="table table-bordered table-striped table-condensed">
+			<tr> <td>ID</td> <td>{{ employee.id }}</td> </tr>
+			<tr> <td>Name</td><td>{{ employee.userName }}</td> </tr>
+			<tr> <td>Company ID</td><td>{{ employee.companyId }}</td> </tr>
+			<tr> <td>Salary</td> <td>{{ employee.salary }}</td> </tr>
+			<tr> <td>Department</td><td>{{ employee.department }}</td> </tr>
+			</tr>
+		 </table>
+			</div>		
+			<div class="row col-lg-3"></div>
+		</div>
+		<br/>
+		<br/>
+		<br/><br/>
+		<div class="row col-lg-12">
+			<div class="col-lg-5"></div>
+			<button class ="btn btn-sm btn-primary" onclick="location.href='#!/employees'" type="button">
+			Go back to employees page</button>
+			<br/><br/>
+		</div>
+ 	</div>
